@@ -1,0 +1,11 @@
+1. Open windows partition manager and delete linux partition and extend volume
+
+2. To clean boot up manager
+
+------- open CMD with ADMIN rights
+------- bcdedit /enum firmware
+------- It will list all different loaders. Don't delete anything randomly
+------- Check for description and find Ubuntu/Fedora etc and note it's identifier
+------- bcdedit /delete {identifier}
+
+3. Done! Restart and check whether the boot loader is directly opening windows without any problem.
