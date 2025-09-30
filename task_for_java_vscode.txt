@@ -1,0 +1,23 @@
+// tasks.json file for java programming in vscode
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and run",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "javac ${relativeFile} && java ${fileBasenameNoExtension} < input.txt > output.txt"
+            ],
+            "presentation": {
+                "reveal": "silent",
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },            
+        }
+    ]
+}
