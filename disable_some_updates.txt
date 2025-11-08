@@ -1,0 +1,12 @@
+C - Windows - System32 - drivers - etc
+
+modify hosts file, add these lines to the last
+
+# For Disabling Sublime Text Updates
+127.0.0.1 www.sublimetext.com
+
+# For Disabling postman updates
+0.0.0.0         dl.pstmn.io
+0.0.0.0         sync-v3.getpostman.com
+0.0.0.0         getpostman.com
+0.0.0.0         go.pstmn.io
