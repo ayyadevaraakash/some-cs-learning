@@ -1,0 +1,5 @@
+lsblk
+sudo umount /dev/sdb*
+sudo wipefs -a /dev/sdb
+sudo parted /dev/sdb mklabel msdos
+sudo mkfs.vfat /dev/sdb
