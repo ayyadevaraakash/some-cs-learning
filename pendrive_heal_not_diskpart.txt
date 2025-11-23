@@ -1,5 +1,28 @@
+See the partitions:
 lsblk
-sudo umount /dev/sdb*
-sudo wipefs -a /dev/sdb
-sudo parted /dev/sdb mklabel msdos
-sudo mkfs.vfat /dev/sdb
+
+Unmount the partitions:
+sudo umount /dev/sda1
+sudo umount /dev/sda2
+sudo umount /dev/sda3
+
+Wipe partition table:
+sudo wipefs -a /dev/sda
+
+Create new partition table:
+sudo parted /dev/sda mklabel msdos
+
+
+Create one full size partition:
+sudo parted -a optimal /dev/sda mkpart primary fat32 0% 100%
+sudo parted -a optimal /dev/sda mkpart primary exfat 0% 100%
+
+Format the new partition:
+sudo mkfs.vfat -F 32 /dev/sda1
+sudo mkfs.exfat /dev/sda1
+
+OR
+
+Format the new partition with rename:
+sudo mkfs.vfat -F 32 -n MYUSB /dev/sda1
+sudo mkfs.exfat -n MYUSB /dev/sda1
