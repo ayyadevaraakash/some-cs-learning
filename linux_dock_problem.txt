@@ -1,0 +1,4 @@
+sudo nano /usr/share/applications/brave-browser.desktop
+StartupNotify=false
+update-desktop-database ~/.local/share/applications
+
