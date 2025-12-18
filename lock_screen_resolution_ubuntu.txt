@@ -1,0 +1,3 @@
+sudo cp ~/.config/monitors.xml /var/lib/gdm3/.config/
+sudo gedit /etc/gdm3/custom.conf (uncomment WaylandEnable=false)
+sudo systemctl restart gdm3
