@@ -1,5 +1,11 @@
 mkdir -p ~/.local/share/applications
+
+(if installed via sudo apt)
 cp /usr/share/applications/brave-browser.desktop ~/.local/share/applications/
+
+(if installed via snap)
+cp /var/lib/snapd/desktop/applications/chromium_chromium.desktop ~/.local/share/applications/
+
 nano ~/.local/share/applications/brave-browser.desktop
 
 update-desktop-database ~/.local/share/applications
