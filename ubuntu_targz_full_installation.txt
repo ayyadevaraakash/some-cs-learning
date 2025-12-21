@@ -1,0 +1,46 @@
+cd ~/Downloads
+tar -xzf something.tar.gz
+sudo mv somethingExtracted/ /opt/giveName
+
+/opt/sts/SpringToolSuite4
+
+==============Create desktop entry==============
+gedit ~/.local/share/applications/sts.desktop
+
+[Desktop Entry]
+Name=Spring Tool Suite
+Comment=Spring Boot IDE
+Exec=/opt/sts/SpringToolSuite4
+Icon=/opt/sts/icon.xpm
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupNotify=true
+
+update-desktop-database ~/.local/share/applications
+
+===========FIX GEAR ICON==============
+
+/opt/sts/SpringToolSuite4 &
+
+Terminal is running.. on running situation
+xprop | grep WM_CLASS
+
+and press STS window somewhere
+
+WM_CLASS(STRING) = "spring-tool-suite-4", "SpringToolSuite4"
+
+gedit ~/.local/share/applications/sts.desktop
+
+[Desktop Entry]
+Name=Spring Tool Suite
+Comment=Spring Boot IDE
+Exec=/opt/sts/SpringToolSuite4
+Icon=/opt/sts/icon.xpm
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupNotify=true
+StartupWMClass=SpringToolSuite4
+
+update-desktop-database ~/.local/share/applications
