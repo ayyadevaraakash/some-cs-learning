@@ -1,0 +1,14 @@
+====DISABLING AUTO-START ON BOOT====
+sudo systemctl disable mysql
+
+====STARTING MYSQL SERVICE====
+sudo systemctl start mysql
+
+====LOGIN TO MYSQL SHELL====
+sudo mysql -u root -p
+
+====STOPPING MYSQL SERVICE====
+sudo systemctl stop mysql
+
+====CHECKING STATUS====
+sudo systemctl status mysql
