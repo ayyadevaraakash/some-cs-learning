@@ -1,4 +1,4 @@
 sudo nano /etc/bluetooth/main.conf
-make AutoEnable=false
+make "AutoEnable=false"
 sudo systemctl daemon-reload
 sudo systemctl restart bluetooth
